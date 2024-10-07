@@ -1,7 +1,17 @@
 import Header from '../Conponentes/header'
 import './../assets/css/RegistrarFuncion.css'
+import ConfirmacionDeFuncion from '../Conponentes/CreacionDeFunciones/ConfirmacionDeFuncion'
+import { useState } from 'react'
+
+
 
 const RegistrarFuncion = () => {
+    const [confirmacion, setConfirmacion] = useState(false)
+
+    const handelClick = (e) => {
+        e.preventDefault()
+        setConfirmacion(!confirmacion)
+    }
     return (
         <>
             <Header nombreTitulo={'Registrar Función'} />
@@ -45,11 +55,24 @@ const RegistrarFuncion = () => {
 
                     <fieldset className='registro-funcion-form-submit'>
                         <button>Cancelar</button>
-                        <input type="submit" value="Enviar" />
+                        <input type="submit" value="Siguiente" onClick={handelClick}/>
 
                     </fieldset>
                 </form>
             </section>
+
+            {confirmacion?    
+                <ConfirmacionDeFuncion
+                nombrePelicula={'El hombre de la mancha'}
+                costoBoleto={'100'}
+                Horario={'10:00'}
+                DuracionF={'120'}
+                FechaF={'2022-01-01'}
+                codigoFuncion={'123456789'}/>
+                :
+                <></>
+            }
+            
         </>
     )
 }
