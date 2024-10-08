@@ -1,4 +1,5 @@
 import '../../assets/css/confirmacionDeFuncion.css'
+import { Link } from 'react-router-dom'
 const ConfirmacionDeFuncion = ({
     nombrePelicula,
     costoBoleto,
@@ -36,7 +37,7 @@ const ConfirmacionDeFuncion = ({
                         <p className='p-datos'>{codigoFuncion}</p>
                     </div>
                     <div className="confirmacion-confirmar">
-                        <button className='button-cancelar'>Cancelar</button>
+                         <Link to="/" ><button className='button-cancelar'>Cancelar</button></Link>   
                         <button className='button-confirmar'>Confirmar</button>
                     </div>
                 </div>

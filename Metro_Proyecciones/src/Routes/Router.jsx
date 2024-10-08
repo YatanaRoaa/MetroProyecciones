@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import MenuPrinsipal from '../paginas/MenuPrinsipal';
-import RegistrarFuncion from '../paginas/RegistrarFuncion';
+import RegistrarFuncion from '../Paginas/RegistrarFuncion';
 
 const AppRouter = () => {
   return (
