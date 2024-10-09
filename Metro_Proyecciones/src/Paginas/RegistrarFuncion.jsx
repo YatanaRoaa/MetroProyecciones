@@ -8,15 +8,25 @@ import { useState } from 'react'
 const RegistrarFuncion = () => {
     const [confirmacion, setConfirmacion] = useState(false)
 
-    const handelClick = (e) => {
+    const handleClickCancelar = () =>{
+        setConfirmacion(false)
+        console.log('click')
+    }
+
+    const handleClickConfirmar = () =>{
+        console.log('Funcion registrada en la base de datos')
+        setConfirmacion(false)
+    }
+
+    const handleClick = (e) => {
         e.preventDefault()
         setConfirmacion(!confirmacion)
     }
     return (
         <>
             <Header nombreTitulo={'Registrar Función'} />
-            <section className='registro-funcion'>
-                <form className='registro-funcion-form'>
+            <section className='box-contenido'>
+                <form className='main-content'>
                     <fieldset className='registro-funcion-form-nombre'>
                         <label htmlFor="nombreFuncion">Nombre</label>
                         <input 
@@ -55,7 +65,7 @@ const RegistrarFuncion = () => {
 
                     <fieldset className='registro-funcion-form-submit'>
                         <button>Cancelar</button>
-                        <input type="submit" value="Siguiente" onClick={handelClick}/>
+                        <input type="submit" value="Siguiente" onClick={handleClick}/>
 
                     </fieldset>
                 </form>
@@ -68,7 +78,10 @@ const RegistrarFuncion = () => {
                 Horario={'10:00'}
                 DuracionF={'120'}
                 FechaF={'2022-01-01'}
-                codigoFuncion={'123456789'}/>
+                codigoFuncion={'123456789'}
+                handleClickCancelar={handleClickCancelar}
+                handleClickConfirmar={handleClickConfirmar}
+                />
                 :
                 <></>
             }

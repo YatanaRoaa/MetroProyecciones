@@ -1,4 +1,4 @@
-import '../../assets/css/confirmacionDeFuncion.css'
+import '../../assets/css/RegistrarFuncion.css'
 import { Link } from 'react-router-dom'
 const ConfirmacionDeFuncion = ({
     nombrePelicula,
@@ -6,11 +6,13 @@ const ConfirmacionDeFuncion = ({
     Horario,
     DuracionF,
     FechaF,
-    codigoFuncion
+    codigoFuncion,
+    handleClickCancelar, 
+    handleClickConfirmar
 }) => {
     return (
         <>
-            <section className='confirmacion-de-funcion'>
+            <section className='confirmacion-de-funcion '>
                 <div className='confirmacion-contenido'>
                     <div className="confirmacion-nombre">
                         <p className='p-descripcion'>Titulo de la Función</p>
@@ -37,8 +39,8 @@ const ConfirmacionDeFuncion = ({
                         <p className='p-datos'>{codigoFuncion}</p>
                     </div>
                     <div className="confirmacion-confirmar">
-                         <Link to="/" ><button className='button-cancelar'>Cancelar</button></Link>   
-                        <button className='button-confirmar'>Confirmar</button>
+                        <button className='button-cancelar' onClick={handleClickCancelar}>Cancelar</button> 
+                        <button className='button-confirmar' onClick={handleClickConfirmar}>Confirmar</button>
                     </div>
                 </div>
             </section>

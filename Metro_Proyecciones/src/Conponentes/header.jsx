@@ -11,7 +11,7 @@ const MenuDesplegado = ({handleClick}) =>{
     <button className='menu-desplegado-button-menu' onClick={handleClick}><Icon className="icon-menu"icon={faBars} /></button>
     <section className='menu-desplegado'>
         <Link to="/registrar-funcion"><button className='menu-desplegado-button'>Registrar Funcion</button></Link>
-        <Link to="/"><button className='menu-desplegado-button'>Cancelar Funcion</button></Link>
+        <Link to="/cancelar-funcion"><button className='menu-desplegado-button'>Cancelar Funcion</button></Link>
         <Link to="/"><button className='menu-desplegado-button'>Funciones Registradas</button></Link>
         <Link to="/"><button className='menu-desplegado-button'>Menu</button></Link>
     </section>
