@@ -19,3 +19,16 @@
     font-weight: 400;
     color: #fff;
 }
+/* header.css */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantiene los elementos distribuidos */
+    padding: 10px 20px;
+}
+
+.h1 {
+    margin-left: 40px; /* Aumenta el margen izquierdo para mover el título a la derecha */
+    font-size: 2rem;
+    color: white;
+}

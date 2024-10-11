@@ -8,11 +8,15 @@ const MenuPrinsipal = () => {
       <section className="menu-prinsipal-flex">
         <img src={imagen} alt="logo" className="menu-prinsipal-logo" />
         <div className="menu-prinsipal-group-buttons">
-          <button className="menu-pricipal-button">Gestión de boletos</button>
+        <Link to="/gestion-de-boletos">
+            <button className="menu-pricipal-button">Gestión de boletos</button>
+          </Link>
           <Link to="/registrar-funcion">
             <button className="menu-pricipal-button">Gestión de función</button>
           </Link>
+          <Link to={"/Estadisticas"}> 
           <button className="menu-pricipal-button">Estadísticas</button>
+          </Link>
         </div>
       </section>
     </>
